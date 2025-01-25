@@ -41,14 +41,40 @@
             //    Console.WriteLine(D3.ToString());
             //    Console.WriteLine(D4.ToString());
 
-            if (D1 > D2)
-                Console.WriteLine("D1 is greater than D2");
-            else if (D1 < D2)
-            
-                Console.WriteLine("D1 is less than  to D2");
-            
-            else
-                Console.WriteLine("D1 is equal to D2");
+            //    if (D1 > D2)
+            //        Console.WriteLine("D1 is greater than D2");
+            //    else if (D1 < D2)
+
+            //        Console.WriteLine("D1 is less than  to D2");
+
+            //    else
+            //        Console.WriteLine("D1 is equal to D2");
+
+
+
+
+
+            //if (D1 <= D2)
+            //{
+            //    Console.WriteLine("D1 is less than or equal to D2");
+            //}
+            //else 
+            //{
+            //    Console.WriteLine("D1 is greater than or equal to D2");
+            //}
+
+
+            //if (D1)
+            //{
+            //    Console.WriteLine("D1 is non-zero");
+            //}
+
+
+
+            DateTime obj = (DateTime)D1;
+
+            Console.WriteLine(obj.ToString("HH/mm/ss"));
+
         }
     }
 }

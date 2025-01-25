@@ -10,11 +10,11 @@ namespace Assignment09C_OOP06
     {
        
 
-        public int? Hours {  get; set; }
+        public int Hours {  get; set; }
         
-        public int? Minutes { get; set; }
+        public int Minutes { get; set; }
 
-        public int? Seconds { get; set; }
+        public int Seconds { get; set; }
 
         public Duration(int hours, int minutes, int seconds)
         {
@@ -141,6 +141,16 @@ namespace Assignment09C_OOP06
         public static bool operator >=(Duration left, Duration right)
         {
             return !(left < right);
+        }
+
+        public static implicit operator bool(Duration duration)
+        {
+            return duration.Hours > 0 || duration.Minutes > 0 || duration.Seconds > 0;
+        }
+
+        public static implicit operator DateTime(Duration duration)
+        {
+            return new DateTime().AddHours(duration.Hours).AddMinutes(duration.Minutes).AddSeconds(duration.Seconds);
         }
 
     }
